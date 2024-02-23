@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { Component} from 'react';
-import Person from './component/person';
+import Person from './component/person/person.js';
 
 class App extends Component{
   constructor(props) {
