@@ -4,29 +4,21 @@ import React, {Component} from "react";
 class person extends Component {
   constructor(props) {
     super(props);
-    this.props=props;
-    this.state={
-        name:"atul kumar singh",
-        age: 22,
-    }
+    this.props = props;
 }
-nameChangeHandeler() {
-    console.log(this.state);
-    this.setState({ name: "vikash singh", age:27 }, () => {
-        console.log(this.state);
-    });
-}
+
    render() {
     return(
         <div>
             <h1>
-                <i>Dear {this.state.name},{this.state.age} year, welcome atul</i>
+               <label>Name</label> : <i>{this.props.name}</i>
                 <br/>
-                <button onClick={() => this.nameChangeHandeler()}>click me </button>
+                <label>Age</label>: <i>{this.props.age}</i>
             </h1>
         </div>
     );
-   }
+   
+}
 }
 
 export default person;
