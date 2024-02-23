@@ -1,13 +1,15 @@
 
 import './App.css';
+import Person from './component/person';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>atul react app</h1>
-        <h2>atultech</h2>
-      </header>
+      <Person name="atul"age="23" />
+      <Person name="vikash"age="27" />
+      
+      
     </div>
   );
 }
