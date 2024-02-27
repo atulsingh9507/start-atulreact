@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./person.css";
+import personstyle from "./person.module.css";
 
 
 class person extends Component {
@@ -9,14 +9,15 @@ class person extends Component {
 }
 
    render() {
+    console.log(personstyle)
     const style = {
         fontsize: "50px ",
         color: "red"
     }
     return(
-        <div className="personBox">
+        <div className={personstyle.personbox}>
             <h1>
-               <label className="personlabel">Name</label> :
+               <label className={personstyle.label}>Name</label> :
                <i>{this.props.name}</i>
                 <br/>
                 <label style={style}>Age</label>: <i>{this.props.age}</i>
