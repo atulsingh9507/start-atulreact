@@ -1,32 +1,29 @@
 import React, {Component} from "react";
-import personstyle from "./person.module.css";
+import PersonStyle from "./Person.module.css";
 
 
-class person extends Component {
+class Person extends Component {
   constructor(props) {
     super(props);
     this.props = props;
 }
 
    render() {
-    console.log(personstyle)
-    const style = {
-        fontsize: "50px ",
-        color: "red"
-    }
     return(
-        <div className={personstyle.personbox}>
+        <>
+        <div className={PersonStyle.PersonBox}>
             <h1>
-               <label className={personstyle.label}>Name</label> :
+               <label className={PersonStyle.Label}>Name</label> ;
                <i>{this.props.name}</i>
                 <br/>
-                <label style={style}>Age</label>: <i>{this.props.age}</i>
+            <label>Age </label>:<i>{this.props.age}</i> 
             </h1>
-        </div>
+            </div>
+        </>
     );
    
 }
 }
 
-export default person;
+export default Person;
 

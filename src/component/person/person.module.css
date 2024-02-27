@@ -1,11 +1,11 @@
-.personBox{
+.PersonBox{
     width: 500px;
     margin: 10px auto;
     padding: 10px;
     box-shadow: 0px 0px 5px red;
 }
 
-.personlabel {
+.PersonLabel {
     color: brown;
 
 }
