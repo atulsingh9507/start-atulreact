@@ -9,12 +9,17 @@ class person extends Component {
 }
 
    render() {
+    const style = {
+        fontsize: "50px ",
+        color: "red"
+    }
     return(
         <div className="personBox">
             <h1>
-               <label>Name</label> : <i>{this.props.name}</i>
+               <label className="personlabel">Name</label> :
+               <i>{this.props.name}</i>
                 <br/>
-                <label>Age</label>: <i>{this.props.age}</i>
+                <label style={style}>Age</label>: <i>{this.props.age}</i>
             </h1>
         </div>
     );
