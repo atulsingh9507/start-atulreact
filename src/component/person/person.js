@@ -11,11 +11,12 @@ class Person extends Component {
    render() {
     return(
         <>
-        <div className={PersonStyle.PersonBox}>
+        <div className={PersonStyle.PersonBox} onClick={this.props.remove}>
+            {this.props.index}
             <h1>
                <label className={PersonStyle.Label}>Name</label> ;
                <i>{this.props.name}</i>
-               
+
                 <br/>
             <label>Age </label>:<i>{this.props.age}</i> 
             </h1>

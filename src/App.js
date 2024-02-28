@@ -22,7 +22,7 @@ class App extends Component{
         },
       
       ],
-    isShow : true, 
+    isShow: true, 
     };
     this.toggleHendler = this.toggleHendler.bind(this);
   }
@@ -32,11 +32,15 @@ class App extends Component{
 toggleHendler() {
   this.setState({isShow: !this.state.isShow})
 }
-
+ removeHandler =(PersonIndex) => {
+const Person = this.state.Persons ;
+Person.splice(PersonIndex, 1);
+this.setState({Persons:Person});
+ };
 render() {
 let Persons;
 Persons = this.state.Persons.map((p, index) => {
-return <Person key={index} name={p.name} age={p.age}></Person>
+return <Person key={index} name={p.name} age={p.age} remove={() => this.removeHandler(index)}></Person>
 });
 
   return <div className='App'>
