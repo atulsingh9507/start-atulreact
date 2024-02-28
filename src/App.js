@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { Component} from 'react';
-import Person from  './component/Person/Person';
+import Person from './component/Person/Person';
 
 class App extends Component{
   constructor(props) {
@@ -32,26 +32,12 @@ class App extends Component{
 
 
 render() {
-  return (
-    <div className="App">
-      <Person 
-      name={this.state.Persons[0].name}
-       age={this.state.Persons[0].age}
-       />
-        <Person 
-      name={this.state.Persons[1].name}
-       age={this.state.Persons[1].age}
-       />
-         <Person 
-      name={this.state.Persons[2].name}
-       age={this.state.Persons[2].age}
-       />
-         <Person 
-      name={this.state.Persons[3].name}
-       age={this.state.Persons[3].age}
-       />
-    </div>
-  );
+let Persons;
+Persons = this.state.Persons.map((p) => {
+return <Person name={p.name} age={p.age}></Person>
+});
+
+  return <div className='App'>{Persons}</div>;
 }
 }
 
