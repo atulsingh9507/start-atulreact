@@ -20,9 +20,7 @@ class App extends Component{
           name:"aman singh",
           age:25,
         },
-        {  name:"abhay singh",
-          age:23
-        }
+      
       ]
     };
   }
@@ -33,8 +31,8 @@ class App extends Component{
 
 render() {
 let Persons;
-Persons = this.state.Persons.map((p) => {
-return <Person name={p.name} age={p.age}></Person>
+Persons = this.state.Persons.map((p, index) => {
+return <Person key={index} name={p.name} age={p.age}></Person>
 });
 
   return <div className='App'>{Persons}</div>;
