@@ -15,6 +15,7 @@ class Person extends Component {
             <h1>
                <label className={PersonStyle.Label}>Name</label> ;
                <i>{this.props.name}</i>
+               
                 <br/>
             <label>Age </label>:<i>{this.props.age}</i> 
             </h1>

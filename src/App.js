@@ -21,13 +21,17 @@ class App extends Component{
           age:25,
         },
       
-      ]
+      ],
+    isShow : true, 
     };
+    this.toggleHendler = this.toggleHendler.bind(this);
   }
   buttonClickHandler =() => {
  console.log(this.state);
   };
-
+toggleHendler() {
+  this.setState({isShow: !this.state.isShow})
+}
 
 render() {
 let Persons;
@@ -35,7 +39,12 @@ Persons = this.state.Persons.map((p, index) => {
 return <Person key={index} name={p.name} age={p.age}></Person>
 });
 
-  return <div className='App'>{Persons}</div>;
+  return <div className='App'>
+    <button onClick={this.toggleHendler}>Toggle</button>
+    {
+    this.state.isShow === true ? Persons : ""
+    }
+    </div>
 }
 }
 
