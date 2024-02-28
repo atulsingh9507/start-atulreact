@@ -1,7 +1,8 @@
 
 import './App.css';
 import React, { Component} from 'react';
-import Person from './component/Person/Person';
+//import Person from './component/Person/Person';
+import Form from './component/Form';
 
 class App extends Component{
   constructor(props) {
@@ -38,18 +39,22 @@ Person.splice(PersonIndex, 1);
 this.setState({Persons:Person});
  };
 render() {
-let Persons;
-Persons = this.state.Persons.map((p, index) => {
-return <Person key={index} name={p.name} age={p.age} remove={() => this.removeHandler(index)}></Person>
-});
-
-  return <div className='App'>
-    <button onClick={this.toggleHendler}>Toggle</button>
-    {
-    this.state.isShow === true ? Persons : ""
-    }
+//let Persons;
+//Persons = this.state.Persons.map((p, index) => {
+//return <Person key={index} name={p.name} age={p.age} remove={() => this.removeHandler(index)}></Person>
+//});
+//
+  return(
+     <div className='App'>
+  {/*<button onClick={this.toggleHendler}>Toggle</button>*/}
+    {/*
+    //this.state.isShow === true ? Persons : ""
+*/ }
+  <Form></Form>
     </div>
-}
+    
+);
+ }
 }
 
 export default App;
