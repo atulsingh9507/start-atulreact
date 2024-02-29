@@ -2,7 +2,7 @@
 import './App.css';
 import React, { Component} from 'react';
 //import Person from './component/Person/Person';
-import Form from './component/Form';
+import Controlled from './component/controlled';
 
 class App extends Component{
   constructor(props) {
@@ -50,7 +50,7 @@ render() {
     {/*
     //this.state.isShow === true ? Persons : ""
 */ }
-  <Form></Form>
+  <Controlled/> 
     </div>
     
 );
